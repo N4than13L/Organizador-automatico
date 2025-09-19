@@ -9,7 +9,7 @@ def organizar_archivos(ruta_origen):
         'documentos': ['.pdf', '.doc', '.docx', '.txt', '.pptx', '.ppt', '.xls'],
         'videos': ['.mp4', '.avi', '.mkv', '.mov'],
         'audio': ['.mp3', '.wav', '.flac'],
-        'codigo': ['.py', 'js', '.html', '.css', '.ipynb'],
+        'codigo': ['.py', '.js', '.html', '.css', '.ipynb'],
         'datos': ['.csv', '.xlsx', '.sav', '.xlsb'],
         'archivos_comprimidos': ['.zip']
     }
@@ -34,9 +34,7 @@ def organizar_archivos(ruta_origen):
                 break
 
 # Ejecutar
-# organizar_archivos("C:\\wamp64\\www\\Organizar_automaticamente\\Prueba")
-
-ruta_archivo = str(input("Agrega la ruta de la carpeta a organizar: "))
+ruta_archivo = str(input("Agrega la ruta de la carpeta a organizar:\n"))
 
 if ruta_archivo != " ":
     organizar_archivos(ruta_archivo)
