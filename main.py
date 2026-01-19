@@ -5,13 +5,26 @@ from pathlib import Path
 def organizar_archivos(ruta_origen):
     # definir extenciones por categoria.
     extenciones = {
+        # extensiones de imagenes.
         'imagenes': ['.jpg','.jpeg', '.png', '.bmp', '.webp', '.gif'],
-        'documentos': ['.pdf', '.doc', '.docx', '.txt', '.pptx', '.ppt', '.xls'],
-        'videos': ['.mp4', '.avi', '.mkv', '.mov'],
+        # extensiones de documentos.
+        'documentos': ['.pdf', '.doc', '.docx', '.txt', ".dotx", ".dotm", ".rtf", ".odt", ".docm"],
+        # extensiones de videos.
+        'videos': ['.mp4', '.avi', '.mkv', '.mov', ".avi", "WebM"],
+        # extensiones de audio.
         'audio': ['.mp3', '.wav', '.flac'],
-        'codigo': ['.py', '.js', '.html', '.css', '.ipynb'],
-        'datos': ['.csv', '.xlsx', '.sav', '.xlsb'],
-        'archivos_comprimidos': ['.zip']
+        # extensiones de codigo.
+        'codigo': ['.py', '.js', '.html', '.css', '.ipynb', ".php", ".c", ".cpp", ".java", ".rb", ".go", ".rs"],
+        # extensiones de hojas de calculo y/o datos.
+        'datos': ['.csv', '.xlsx', ".xltx", ".xltm", ".xlr", '.sav', '.xlsb', '.xls', '.json', '.xml'],
+        # extensiones de aplicaciones e instaladores (imagenes ISO).
+        "Instaladores": ['.exe', '.iso', '.bin'],
+        # extensiones de fuentes de texto.
+        "fuentes": ['.ttf', '.otf', '.fon'],
+        # extensiones de presentaciones.
+        "presentaciones": ['.ppt', '.pptx', '.key', '.odp'],
+        # extensiones de archivos comprimidos.
+        'archivos_comprimidos': ['.zip', '.rar', '.7z', '.tar', '.gz', ".Gzip"],
     }
 
     # crear categorias si no existen
@@ -34,6 +47,9 @@ def organizar_archivos(ruta_origen):
                 break
 
 # Ejecutar
+print("================================")
+print("  Organizador de Archivos  ")
+print("================================")
 ruta_archivo = str(input("Agrega la ruta de la carpeta a organizar:\n"))
 
 if ruta_archivo != " ":
